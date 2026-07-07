@@ -1,200 +1,152 @@
 :host {
     display: block;
+    background: #f4f6f9;
 }
 
-/* ── Wrapper ──────────────────────────────────────────── */
-.portfolio-wrapper {
-    max-width: 960px;
-    margin: 24px auto;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.18);
-    background: #ffffff;
+/* Main Container */
+.portfolio-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-/* ── Header ───────────────────────────────────────────── */
-.portfolio-header {
-    background: linear-gradient(135deg, #0d1b2a 0%, #1b4f72 55%, #2980b9 100%);
-    padding: 52px 32px 44px;
-    text-align: center;
-    color: #ffffff;
-}
-
-.avatar-circle {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.18);
-    border: 3px solid rgba(255, 255, 255, 0.55);
+/* Header */
+.hero-section {
+    background: linear-gradient(135deg, #1e3a5f, #2c5282);
+    color: white;
+    border-radius: 18px;
+    padding: 2rem;
     display: flex;
     align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    border: 3px solid rgba(255,255,255,0.4);
+    display: flex;
     justify-content: center;
-    margin: 0 auto 22px;
-}
-
-.avatar-initials {
-    font-size: 38px;
+    align-items: center;
+    font-size: 1.6rem;
     font-weight: 700;
-    color: #ffffff;
-    letter-spacing: 3px;
 }
 
-.portfolio-name {
-    font-size: 2.4rem;
-    font-weight: 700;
-    margin: 0 0 10px;
-    color: #ffffff;
-    letter-spacing: 0.5px;
-}
-
-.portfolio-title {
-    font-size: 1.15rem;
-    color: rgba(255, 255, 255, 0.88);
-    margin: 0 0 14px;
-    font-style: italic;
-    font-weight: 400;
-}
-
-.portfolio-location {
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.72);
+.hero-content h1 {
     margin: 0;
+    font-size: 2rem;
 }
 
-/* ── Sections ─────────────────────────────────────────── */
-.portfolio-section {
-    padding: 32px 36px;
-    border-bottom: 1px solid #eef2f7;
-    background: #ffffff;
-}
-
-.section-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #1b4f72;
-    margin: 0 0 18px;
-    padding-bottom: 8px;
-    border-bottom: 3px solid #2980b9;
-    display: inline-block;
-}
-
-.about-text {
+.designation {
+    margin-top: 0.5rem;
     font-size: 1rem;
-    line-height: 1.85;
-    color: #444444;
-    margin: 0;
-    white-space: pre-wrap;
+    opacity: 0.9;
 }
 
-/* ── Stats Row ────────────────────────────────────────── */
-.portfolio-stats {
+.location {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+/* Common Cards */
+.card-section {
+    background: white;
+    margin-top: 1.5rem;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.card-section h2 {
+    margin-bottom: 1rem;
+    color: #1e3a5f;
+    font-size: 1.2rem;
+}
+
+.card-section p {
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Stats */
+.stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    background: #f4f7fb;
-    border-bottom: 1px solid #eef2f7;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
 }
 
-.stat-card {
-    padding: 28px 20px;
+.info-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.25rem;
     text-align: center;
-    border-right: 1px solid #dce8f3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    transition: background 0.2s ease;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
-.stat-card:last-child {
-    border-right: none;
-}
-
-.stat-card:hover {
-    background: #e2eef8;
-}
-
-.stat-icon-wrap {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.stat-icon-wrap.domain     { background: #1b4f72; }
-.stat-icon-wrap.experience { background: #117a65; }
-.stat-icon-wrap.status     { background: #884ea0; }
-
-.stat-label {
-    font-size: 0.72rem;
+.label {
+    display: block;
+    color: #6b7280;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #8a9ab0;
+    margin-bottom: 0.5rem;
+}
+
+.value {
+    display: block;
+    font-size: 1.1rem;
     font-weight: 600;
+    color: #1e3a5f;
 }
 
-.stat-value {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: #1b4f72;
-}
-
-/* ── Contact ──────────────────────────────────────────── */
-.contact-section {
-    border-bottom: none;
-}
-
-.contact-links {
+/* Contact */
+.contact-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 1rem;
 }
 
-.contact-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
+.contact-link {
     text-decoration: none;
-    color: #2980b9;
-    font-size: 0.95rem;
-    font-weight: 600;
-    padding: 10px 22px;
-    border: 2px solid #2980b9;
-    border-radius: 50px;
-    transition: background 0.2s ease, color 0.2s ease;
+    color: #1e3a5f;
+    border: 1px solid #d6dce5;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    transition: all 0.2s ease;
 }
 
-.contact-item:hover {
-    background: #2980b9;
-    color: #ffffff;
+.contact-link:hover {
+    background: #1e3a5f;
+    color: white;
 }
 
-/* ── State Boxes ──────────────────────────────────────── */
-.state-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    padding: 60px 32px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    margin: 24px auto;
-    max-width: 520px;
+/* Messages */
+.message-box {
+    background: white;
+    padding: 3rem;
+    border-radius: 16px;
     text-align: center;
-    color: #555555;
+    margin: 2rem auto;
+    max-width: 500px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
-.config-notice {
-    background: #fef9e7;
-    border: 1px solid #f9d878;
-    color: #5c4a1e;
+.error {
+    color: #b91c1c;
 }
 
-.error-box {
-    background: #fff5f5;
-    border: 1px solid #fca5a5;
-    color: #7f1d1d;
+/* Mobile */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
 }

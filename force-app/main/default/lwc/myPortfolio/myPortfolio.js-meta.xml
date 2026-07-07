@@ -2,19 +2,20 @@
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>67.0</apiVersion>
     <isExposed>true</isExposed>
+
     <targets>
         <target>lightning__HomePage</target>
         <target>lightning__AppPage</target>
     </targets>
+
     <targetConfigs>
         <targetConfig targets="lightning__HomePage,lightning__AppPage">
             <property
                 name="accountId"
                 type="String"
                 label="Portfolio Account ID"
-                description="The Salesforce Account Record ID whose fields power the portfolio display"
-                required="true"
-            />
+                description="Account Record Id"
+                required="true" />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
